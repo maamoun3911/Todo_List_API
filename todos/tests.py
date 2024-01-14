@@ -45,3 +45,4 @@ class TodoAPITestCase(APITestCase):
         response_object = self.client.get(reverse("todo_api:todo_detail", kwargs={"pk":2}))
         self.assertEqual(response_object.status_code, status.HTTP_200_OK)
         self.assertContains(response_object, "from elzero web school")
+    
